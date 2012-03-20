@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="usuario" class="mx.com.sintelti.domain.UsuarioEntity" scope="prototype"/>
+
+	<bean id="productosEntity" class="mx.com.sintelti.domain.ProductosEntity" scope="prototype"/>
+	
+	<bean id="bdProductos" class="mx.com.sintelti.dao.ProductosColeccionesDAO">
+	 	<property name="listaProductos" ref="listaProductos"></property>
+	 </bean>
+	 
+	 <bean id="bdUsuarios" class="mx.com.sintelti.dao.UsuariosColeccionesDAO">
+	 	<property name="listaUsuarios" ref="listaUsuarios"></property>
+	 </bean>
+	 
+	 <bean id="productosBDDAO" class="mx.com.sintelti.dao.ProductosBDDAO"/>
+
+	<bean id="listaProductos" class="java.util.ArrayList" scope="singleton"/>
+	<bean id="listaUsuarios" class="java.util.ArrayList" scope="singleton"/>
+
+</beans>

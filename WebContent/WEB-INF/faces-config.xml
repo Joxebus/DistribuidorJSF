@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config version="1.2" xmlns="http://java.sun.com/xml/ns/javaee"
+ xmlns:xi="http://www.w3.org/2001/XInclude"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd">
+ <managed-bean>
+  <managed-bean-name>productosManageBean</managed-bean-name>
+  <managed-bean-class>mx.com.sintelti.business.ProductosManagerBean</managed-bean-class>
+  <managed-bean-scope>session</managed-bean-scope>
+ </managed-bean>
+ <managed-bean>
+  <managed-bean-name>login</managed-bean-name>
+  <managed-bean-class>mx.com.sintelti.business.UsuariosBean</managed-bean-class>
+  <managed-bean-scope>request</managed-bean-scope>
+  <managed-property>
+   <property-name>alias</property-name>
+   <value>sintel</value>
+  </managed-property>
+  <managed-property>
+   <property-name>pass</property-name>
+   <value>ti</value>
+  </managed-property>
+ </managed-bean>
+ <navigation-rule>
+  <from-view-id>/login.jsp</from-view-id>
+  <navigation-case>
+   <from-outcome>success</from-outcome>
+   <to-view-id>/Productos/registroProductos.jsp</to-view-id>
+  </navigation-case>
+  <navigation-case>
+   <from-outcome>error</from-outcome>
+   <to-view-id>/error.jsp</to-view-id>
+  </navigation-case>
+ </navigation-rule>
+</faces-config>

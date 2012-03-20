@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#login.jsp" PATH="/login.jsp"
+  SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#login.jsp:0" NAME="item" PATH="/login.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="success::#Productos#registroProductos.jsp"
+    NAME="output" PATH="/Productos/registroProductos.jsp"
+    TARGET="rules:#Productos#registroProductos.jsp" TITLE="success" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="error::#error.jsp" NAME="output1"
+    PATH="/error.jsp" TARGET="rules:#error.jsp" TITLE="error" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#error.jsp" PATH="/error.jsp"
+  SHAPE="256,177,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#Productos#registroProductos.jsp"
+  PATH="/Productos/registroProductos.jsp" SHAPE="256,33,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>
